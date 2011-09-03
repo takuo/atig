@@ -19,6 +19,7 @@ class Atig::Agent::ListStatus
         log :debug, "retrieve #{name} statuses"
         q = {}
         q.update(:since_id => @prev[name]) if @prev.key?(name)
+        q.update(:include_rts => 1)
 
         screen_name,slug = parse name
         statuses = t.get("#{screen_name}/lists/#{slug}/statuses",q)
