@@ -20,7 +20,7 @@ module Atig
                    URI.regexp(%w[http https])
                  else
                    %r{
-			http:// (?:
+			https?:// (?:
 				(?: bit\.ly | (?: tin | rub) yurl\.com | j\.mp | t\.co
                                   | htn.to
 				  | is\.gd | cli\.gs | tr\.im | u\.nu | airme\.us
